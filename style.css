@@ -230,7 +230,7 @@ body {
 	body {
 		width: 100%;
 		margin: 0px;
-		background: url(img/bg.jpg) fixed no;
+		background: url(img/bg.jpg);
 		overflow-x: hidden;
 	}
 	hr {
@@ -344,4 +344,27 @@ footer {
 	text-align: center;
 	color: white;
 	font-size: 1.2em
+}
+
+body > div > p.subtitle {
+	margin: 0;
+}
+
+body > div > center > img {
+	border-radius: 0;
+	width: 65%;
+}
+
+@media screen and (min-width: 500px) {
+    body > div.card.animated.fadeIn {
+			max-width: 50%;
+			    margin: 0 auto;
+		}
+}
+
+@media screen and (min-width: 900px) {
+    body > div.card.animated.fadeIn {
+			max-width: 30%;
+			    margin: 0 auto;
+		}
 }

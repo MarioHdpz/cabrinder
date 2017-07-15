@@ -18,7 +18,7 @@
    <body>
       <!--Card-->
       <div class="card animated fadeIn">
-         <center><img class="center animated rollIn" src="img/ava.png" alt="avatar"></center>
+         <center><img id="img" class="center animated rollIn" src="img/1.jpg" alt="cabra"></center>
          <hr>
          <div class="name">
             cabra1
@@ -40,29 +40,43 @@
                 
             </span>
             </a>
-            <a href="https://plus.google.com/u/0/112966876017615905321" target="_blank">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-bolt" aria-hidden="true"></i>
-            </span>
             </a>
-            <a href="https://www.instagram.com/abhijeet_n7/" target="_blank">
-            <span class="fa-stack fa-lg">
+            <span onclick="changeImg()"class="fa-stack fa-lg">
                 <i class="fa fa-circle-thin fa-stack-2x"></i>
                 <i class="fa fa-heart" aria-hidden="true"></i>
             </span>
             </a>
-            <a href="https://github.com/shrinathnayak07" target="_blank">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-            </span>
             </a>
          </p>
       </div>
       <!--footer-->
-      <footer class="animated fadeIn">
-         &copy; Dev.f 2017 Cabrinder
-      </footer>
+      <h3 style="    text-align: center;
+    font-size: 2em;
+    color: cornflowerblue
+    margin-top: 0;
+    margin-bottom: auto;
+    text-transform: capitalize;
+    text-decoration: none;
+    "><a href="login.html" style="text-decoration: none; color: cornflowerblue; cursor: pointer;">Logeeeeeate</a></h3>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript">
+        var imgPath = $("img.changeImg").attr("src", "picArray[i++]");
+        
+        var picArray= [
+          'img/2.jpg',
+          'img/3.jpg',
+          'img/4.jpg',
+          'img/5.jpg'
+        ];
+         var i = 0;
+        function changeImg(){                      
+            
+            $("#img").prop("src", picArray[i]);
+            i++;
+            if(i == 4){
+              i = 0;
+            }
+        }
+      </script>
    </body>
 </html>
